@@ -1,0 +1,85 @@
+<subtitles default_id="ger">
+    <subtitle
+        id="def" 
+        title="Standard"
+        format="srt">
+        <!-- description="tooltip in flash"-->
+        
+        ./media/srt/problema_english_basic.srt
+    </subtitle>
+
+    <subtitle
+        id="eng" 
+        title="English"
+        format="srt">
+
+        ./media/srt/problema_english.srt
+    </subtitle>
+
+    <subtitle
+        id="arb" 
+        title="Arabic"
+        format="srt" 
+        fontName="Adobe Arabic" 
+        fontFile="./media/swf/font-arabic.swf" 
+        fontSize="30">
+        
+        ./media/srt/problema_arabic.srt
+    </subtitle>
+
+    <subtitle
+        id="chn" 
+        title="Chinese"
+        format="srt" 
+        fontName="Bitstream Cyberbit" 
+        fontFile="./media/swf/font-chinese.swf" 
+        fontSize="22">
+        
+        ./media/srt/problema_chinese.srt
+    </subtitle>
+
+    <subtitle
+        id="fre" 
+        title="French"
+        format="srt">
+
+        ./media/srt/problema_french.srt
+    </subtitle>
+
+    <subtitle
+        id="ger" 
+        title="German"
+        format="srt">
+
+        ./media/srt/problema_german.srt
+    </subtitle>
+
+    <subtitle
+        id="jap" 
+        title="Japanese"
+        format="srt" 
+        fontName="Meiryo UI" 
+        fontFile="./media/swf/font-japanese.swf" 
+        fontSize="22">
+        
+        ./media/srt/problema_japanese.srt
+    </subtitle>
+
+    <subtitle
+        id="por" 
+        title="Portuguese"
+        format="srt">
+
+        ./media/srt/problema_portuguese.srt
+    </subtitle>
+
+    <subtitle
+        id="esp" 
+        title="Spanish"
+        format="srt">
+
+        ./media/srt/problema_spanish.srt
+    </subtitle>
+
+
+</subtitles>

@@ -1,0 +1,19 @@
+<nav>
+  {{> cast-navigation}}
+</nav>
+
+<div class="moderators">
+    {{#each moderators}}
+      {{> cast-person}}
+    {{/each}}
+</div>
+
+<div class="participants">
+    {{#each participants}}
+      {{> cast-person}}
+    {{/each}}
+</div>
+
+<nav>
+  {{> cast-navigation}}
+</nav>

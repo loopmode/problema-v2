@@ -1,0 +1,153 @@
+<div id="screenings">
+                <div id="fb-root"></div>
+                <script>
+                </script>
+                <div id="map_canvas"></div>
+
+
+                <div id="screenings-content">
+                    <div id="screenings-content-left">&nbsp;
+                    </div>
+                    <div id="screenings-content-right">
+                        <h2>Organize a screening</h2>
+                        <p>For free thinkers and free speakers, here is a free film.</p>
+                        <!-- <a id="kit-download-button" href="#"><span class="aquo">&raquo;</span> Download the Starter Kit</a> -->
+                        <div>
+                            <div>Create a facebook event and import it to this page.</div>
+                            <script type="text/javascript">
+                            document.write('<fb:login-button perms="user_events,user_photos,publish_stream,create_event,rsvp_event" id="facebook-button" onlogin="getEvents()">Import new event from Facebook</fb:login-button>');
+                            </script>
+
+                        </div>
+                        <div class="non-fb-new">
+                            <div>Non-facebook users can announce their screening here.</div>
+                            <a id="non-facebook-button" href="/new_event">
+                                <span>Import details of your screening</span>
+                            </a>
+                        </div>
+                        <div id="screenings-mine">
+                            <h2>Your Events</h2>
+                            <ul class="messages" id="import-messages"></ul>
+                            <div id="my-events"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                // Facebook Graph API init
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        appId: '164969400189839',
+                        status: true,
+                        cookie: true,
+                        xfbml: true
+                    });
+                };
+                (function() {
+                    var e = document.createElement('script');
+                    e.async = true;
+                    e.src = document.location.protocol +
+                        '//connect.facebook.net/en_US/all.js';
+                    document.getElementById('fb-root').appendChild(e);
+                }());
+                </script>
+
+            </div>
+            <div id="new_event">
+
+
+                <form method="post" action="" id="new-event-form">
+                    <div style='display:none'>
+                        <input type='hidden' name='csrfmiddlewaretoken' value='751ee3d4e1fd38113812a00828f6b699' />
+                    </div>
+                    <h3 style="font-style:italic">Import details of your screening</h3>
+                    <i style="font-size:12px;display:block;margin:15px 0">All fields are required.</i> 
+                    <div class="errors"></div>
+
+                    <p class="field field-id_email">
+                        <label for="id_email">Your email</label>
+                        <input id="id_email" type="text" name="email" maxlength="75" />
+                    </p>
+
+                    <p class="field field-id_name">
+                        <label for="id_name">Event title</label>
+                        <input id="id_name" type="text" name="name" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_description">
+                        <label for="id_description">Description</label>
+                        <textarea id="id_description" rows="10" cols="40" name="description"></textarea>
+                    </p>
+
+                    <p class="field field-id_start_time">
+                        <label for="id_start_time">Start time</label>
+                        <input type="text" name="start_time" id="id_start_time" />
+                    </p>
+
+                    <p class="field field-id_end_time">
+                        <label for="id_end_time">End time</label>
+                        <input type="text" name="end_time" id="id_end_time" />
+                    </p>
+
+                    <p class="field field-id_location">
+                        <label for="id_location">Location name</label>
+                        <input id="id_location" type="text" name="location" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_venue_street">
+                        <label for="id_venue_street">Venue street</label>
+                        <input id="id_venue_street" type="text" name="venue_street" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_venue_city">
+                        <label for="id_venue_city">Venue city</label>
+                        <input id="id_venue_city" type="text" name="venue_city" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_venue_zip">
+                        <label for="id_venue_zip">Venue zip</label>
+                        <input type="text" name="venue_zip" id="id_venue_zip" />
+                    </p>
+
+                    <p class="field field-id_venue_state">
+                        <label for="id_venue_state">Venue state</label>
+                        <input id="id_venue_state" type="text" name="venue_state" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_venue_country">
+                        <label for="id_venue_country">Venue country</label>
+                        <input id="id_venue_country" type="text" name="venue_country" maxlength="200" />
+                    </p>
+
+                    <p class="field field-id_venue_latitude">
+                        <label for="id_venue_latitude">Venue latitude</label>
+                        <input type="text" name="venue_latitude" id="id_venue_latitude" />
+                    </p>
+
+                    <p class="field field-id_venue_longitude">
+                        <label for="id_venue_longitude">Venue longitude</label>
+                        <input type="text" name="venue_longitude" id="id_venue_longitude" />
+                    </p>
+
+                    <p class="field field-id_recaptcha">
+                        <label for="id_recaptcha">Recaptcha</label>
+                        <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LcY874SAAAAACwtI1uitJStFQ0FTDyZkMPL-Fou"></script>
+
+                        <noscript>
+                            <iframe src="http://api.recaptcha.net/noscript?k=6LcY874SAAAAACwtI1uitJStFQ0FTDyZkMPL-Fou" height="300" width="500" frameborder="0"></iframe>
+                            <br />
+                            <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+                            <input type='hidden' name='recaptcha_response_field' value='manual_challenge' />
+                        </noscript>
+
+                    </p>
+
+
+                    <div style="width:550px;clear:both;overflow:hidden;margin-top:10px;">
+                        <input type="submit" value="Proceed" name="submit" style="float:left" />
+                        <input type="button" value="Cancel" name="cancel" style="float:right" />
+                    </div>
+                </form>
+                <div id="map_canvas_new_event" style="clear:both"></div>
+
+            </div>
