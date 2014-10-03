@@ -1,0 +1,1426 @@
+{
+    "lists": [
+        {
+            "name": "problema",
+            "items": [
+
+                {
+                    "title": "Directed by",
+                    "credits": [
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Based on an Idea by",
+                    "credits": [
+                        "Cindy Gantz",
+                        "Jackie Northway-Wallace",
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Adapted for the Screen by",
+                    "credits": [
+                        "Joe Holden"
+                    ]
+                },
+
+                {
+                    "title": "Produced by",
+                    "credits": [
+                        "Andro Steinborn",
+                        "Ben Schneider",
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Original Music by",
+                    "credits": [
+                        "Rudolph Moser"
+                    ]
+                },
+
+                {
+                    "title": "Directors of Photography",
+                    "credits": [
+                        "Frank Griebe",
+                        "Tom Henze",
+                        "Robert Kummer",
+                        "Franz Lustig",
+                        "Nicola Pecorini",
+                        "J&ouml;rg Schmidt-Reitwein",
+                        "Nana Yuriko"
+                    ]
+                },
+
+                {
+                    "title": "Edited by",
+                    "credits": [
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Contributing Editors",
+                    "credits": [
+                        "Martin Swann",
+                        "Robert Kummer"
+                    ]
+                },
+
+                {
+                    "title": "Re-Recording Mixer",
+                    "credits": [
+                        "Martin Steyer"
+                    ]
+                },
+
+                {
+                    "title": "Sound Design by",
+                    "credits": [
+                        "Dirk Jacob"
+                    ]
+                },
+
+                {
+                    "title": "Post-Production Producer",
+                    "credits": [
+                        "Lars Karich"
+                    ]
+                },
+
+                {
+                    "title": "Post-Production Manager",
+                    "credits": [
+                        "Boris Mang"
+                    ]
+                },
+
+                {
+                    "title": "Visual Research Supervisors",
+                    "credits": [
+                        "Nora Colie",
+                        "Pauline Doutreluingne"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Editor",
+                    "credits": [
+                        "Laura Fong"
+                    ]
+                },
+
+                {
+                    "title": "Zeppelin Operator",
+                    "credits": [
+                        "Jürgen Hohmuth"
+                    ]
+                },
+
+                {
+                    "title": "Zeppelin Camera",
+                    "credits": [
+                        "Ralf Brauner"
+                    ]
+                },
+
+                {
+                    "title": "Assembly Editing, Translation &amp; Subtitling",
+                    "credits": [
+                        "Eremipagamo Amabebe",
+                        "Errol Bailey",
+                        "Joana Bértholo",
+                        "Elinore Burke",
+                        "Jeremy Cowie",
+                        "Richard Davis",
+                        "Manuel Dierkes",
+                        "Lasse Jensen",
+                        "Brian Kiel",
+                        "Judith Lange",
+                        "Susana Leal",
+                        "Irene Mogollon",
+                        "Megumi Nishikura",
+                        "Annette Ochs",
+                        "Hili Perlson",
+                        "Tycho Pfäfflin",
+                        "Kareth Schaffer",
+                        "Darwin Silva-Torres",
+                        "Mariya Stoyanova",
+                        "Yang Song",
+                        "Thomas Thistlethwaite",
+                        "Ambika Thompson"
+                    ]
+                },
+
+                {
+                    "title": "Visual Research &amp; Clearance",
+                    "credits": [
+                        "Göran-Adrian Bellin",
+                        "Amel Bouksani",
+                        "Rachel de Joode",
+                        "Cecily Hamilton Baillie",
+                        "Fernanda Goriba",
+                        "Kim June",
+                        "Marlien Koch",
+                        "Max Merz",
+                        "Judith Landkammer",
+                        "Polly Robbins",
+                        "Sofia Uguccioni",
+                        "Martin Wenke"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Researchers",
+                    "credits": [
+                        "Kevin Klein",
+                        "Mariana Polke de Castro",
+                        "Masa Loncaric",
+                        "Nina Salzer",
+                        "Yero Schutte"
+                    ]
+                },
+
+                {
+                    "title": "Special Clearance",
+                    "credits": [
+                        "Michael Konstabel"
+                    ]
+                },
+
+                {
+                    "title": "Online Editors",
+                    "credits": [
+                        "Stefan Klinker",
+                        "Mathias Niepenberg"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Online Editors",
+                    "credits": [
+                        "Tom Kaufhold",
+                        "David Kuruc"
+                    ]
+                },
+
+                {
+                    "title": "Stage Mixing",
+                    "credits": [
+                        "ARRI Film &amp; TV Berlin"
+                    ]
+                },
+
+                {
+                    "title": "Sound Editors",
+                    "credits": [
+                        "Benjamin Hörbe",
+                        "Dominik Schleier"
+                    ]
+                },
+
+                {
+                    "title": "Sound Mix Technician",
+                    "credits": [
+                        "Michael Wolf"
+                    ]
+                },
+
+                {
+                    "title": "Post-production Facility",
+                    "credits": [
+                        "Das Werk"
+                    ]
+                },
+
+                {
+                    "title": "Producer at Das Werk",
+                    "credits": [
+                        "Wolf Bosse"
+                    ]
+                },
+
+                {
+                    "title": "Colorists",
+                    "credits": [
+                        "Nico Hauter",
+                        "Philipp Orgassa"
+                    ]
+                },
+
+                {
+                    "title": "Post-production Coordinators",
+                    "credits": [
+                        "John Hansen",
+                        "Matthias Knoefler"
+                    ]
+                },
+
+                {
+                    "title": "Music Supervisor",
+                    "credits": [
+                        "Peter Weiss"
+                    ]
+                },
+
+                {
+                    "title": "Title Design by",
+                    "credits": [
+                        "Ebon Heath",
+                        "Easton West"
+                    ]
+                },
+
+                {
+                    "title": "Executive Assistant to Ralf Schmerberg",
+                    "credits": [
+                        "Christian Schmid"
+                    ]
+                },
+
+                {
+                    "title": "Production Assistants",
+                    "credits": [
+                        "Joanne Guillon",
+                        "Kimberley Miller"
+                    ]
+                },
+
+                {
+                    "title": "I.T. Support",
+                    "credits": [
+                        "Roland Brehe"
+                    ]
+                },
+
+                {
+                    "title": "Production Accountant",
+                    "credits": [
+                        "Uta Abt"
+                    ]
+                },
+
+                {
+                    "title": "Mindpirates Project Manager",
+                    "credits": [
+                        "Felix Vogler"
+                    ]
+                },
+
+                {
+                    "title": "Communication",
+                    "credits": [
+                        "Bureau N, Silke Neumann &amp; Moritz Estermann"
+                    ]
+                }
+
+            ]
+        },
+
+        {
+            "name": "music",
+            "items": [{
+                    "title": "Downbeat",
+                    "info": [
+                        "performed by Morpho Cinetose",
+                        "written by Simon Brasset",
+                        "courtesy of Morpho Cinetose",
+                        "published by deepindub.org"
+                    ]
+                },
+
+                {
+                    "title": "Future Rock",
+                    "info": [
+                        "Strategy",
+                        "Paul Dickow",
+                        "courtesy of Kranky",
+                        "published by Kranky Records"
+                    ]
+                },
+
+                {
+                    "title": "Plan, Steel, Drive",
+                    "info": [
+                        "Kinski",
+                        "performed by Chris Martin &amp; Kinski",
+                        "courtesy of Subpop Records",
+                        "published by Cargo Records"
+                    ]
+                },
+
+                {
+                    "title": "Spirit",
+                    "info": [
+                        "Taurus",
+                        "courtesy of Sony Music Entertainment GmbH",
+                        "published by Universal Music/Rondor Music"
+                    ]
+                },
+
+                {
+                    "title": "Water (Part Two)",
+                    "info": [
+                        "Steamhammer",
+                        "performed by Steamhammer",
+                        "published by Bellaphon Germany"
+                    ]
+                },
+
+                {
+                    "title": "Alte Frau",
+                    "info": [
+                        "Mosermeyerdöring",
+                        "performed by Mosermeyerdöring",
+                        "courtesy of Mosermeyerdöring",
+                        "published by Ballhaus Entertainment"
+                    ]
+                },
+
+                {
+                    "title": "Enter the Heretic",
+                    "info": [
+                        "Badawi",
+                        "performed by Raz Mesinai",
+                        "courtesy of Asphodel Ltd.",
+                        "pubished by Asphodel Records"
+                    ]
+                },
+
+                {
+                    "title": "Miracle of Love",
+                    "info": [
+                        "Swans",
+                        "Michael Gira",
+                        "courtesy of Young God Records",
+                        "published by Young God Records"
+                    ]
+                },
+
+                {
+                    "title": "Solitude",
+                    "info": [
+                        "Black Sabbath",
+                        "courtesy of Universal Music",
+                        "published by Essex Music"
+                    ]
+                },
+
+                {
+                    "title": "Terre",
+                    "info": [
+                        "Annette Vande Gorne",
+                        "performed by Annette Vande Gorne",
+                        "published by YMX MeDIA"
+                    ]
+                },
+
+                {
+                    "title": "Ti, Ki Izziva",
+                    "info": [
+                        "performed by Laibach",
+                        "courtesy of Cherry Red Records",
+                        "published by Universal Music Ltd."
+                    ]
+                },
+
+                {
+                    "title": "Evening",
+                    "info": [
+                        "Mosermeyer",
+                        "performed by Mosermeyer",
+                        "courtesy of Mosermeyer",
+                        "published by Ballhaus Entertainment"
+                    ]
+                }
+            ]
+        },
+
+
+
+        {
+            "name": "table of free voices",
+            "items": [{
+                    "title": "Directed by",
+                    "credits": [
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Directed by",
+                    "credits": [
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Director",
+                    "credits": [
+                        "Sandra Schaede"
+                    ]
+                },
+
+                {
+                    "title": "Executive Producer",
+                    "credits": [
+                        "Jolanda Darbyshire"
+                    ]
+                },
+
+                {
+                    "title": "Logistics Director",
+                    "credits": [
+                        "Katrin Lewinsky"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Director, Logistics",
+                    "credits": [
+                        "Christopher Trott"
+                    ]
+                },
+
+                {
+                    "title": "Script by",
+                    "credits": [
+                        "Joe Holden"
+                    ]
+                },
+
+                {
+                    "title": "Timekeeping by",
+                    "credits": [
+                        "Deborah Rogers"
+                    ]
+                },
+
+                {
+                    "title": "I.T. Director",
+                    "credits": [
+                        "Evan Schechtman"
+                    ]
+                },
+
+                {
+                    "title": "I.T. Operators",
+                    "credits": [
+                        "James Jenkins"
+                    ]
+                },
+
+                {
+                    "title": "Production Assistant",
+                    "credits": [
+                        "Nina Klapproth"
+                    ]
+                },
+
+                {
+                    "title": "Logistics Assistant",
+                    "credits": [
+                        "Nico Blankenhorn"
+                    ]
+                },
+
+                {
+                    "title": "Still Photographers",
+                    "credits": [
+                        "Ali Ghandtschi"
+                    ]
+                },
+
+
+
+
+
+
+
+                {
+                    "title": "The Table of Free Voices",
+                    "subtitle": "designed by",
+                    "credits": [
+                        "Million Devushka Architekten"
+                    ]
+                },
+
+
+
+
+
+
+
+                {
+                    "title": "dropping knowledge",
+                    "subtitle": "founded by",
+                    "credits": [
+                        "Cindy Gantz",
+                        "Jackie Northway-Wallace",
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Executive Director",
+                    "credits": [
+                        "Ralf Schmerberg"
+                    ]
+                },
+
+                {
+                    "title": "Treasurer",
+                    "credits": [
+                        "Uta Abt"
+                    ]
+                },
+
+                {
+                    "title": "Chief Operating Officers",
+                    "credits": [
+                        "Izabel Mellinghoff",
+                        "Nina Neelsen"
+                    ]
+                },
+
+                {
+                    "title": "Participant Relations Director",
+                    "credits": [
+                        "Eva Stein"
+                    ]
+                },
+
+                {
+                    "title": "Creative Directors",
+                    "credits": [
+                        "Alex Marashian",
+                        "Andreas Läufer"
+                    ]
+                },
+
+                {
+                    "title": "Communications Director",
+                    "credits": [
+                        "Felix Servas"
+                    ]
+                },
+
+                {
+                    "title": "Online Unit Director",
+                    "credits": [
+                        "Eric Mahleb"
+                    ]
+                },
+
+                {
+                    "title": "Lead Technologist",
+                    "credits": [
+                        "Jakob Uszkoreit"
+                    ]
+                },
+
+                {
+                    "title": "Scientific Director",
+                    "credits": [
+                        "Hans Uszkoreit"
+                    ]
+                },
+
+                {
+                    "title": "Chief Liaison Officer",
+                    "credits": [
+                        "Celia Gräfin von Bismarck"
+                    ]
+                },
+
+                {
+                    "title": "Financial Controller",
+                    "credits": [
+                        "Ursula Schweighart"
+                    ]
+                },
+
+                {
+                    "title": "Fundraising Coordinator",
+                    "credits": [
+                        "Bettina Pabst"
+                    ]
+                },
+
+                {
+                    "title": "Accounting",
+                    "credits": [
+                        "Boris Hoffmann-Plato"
+                    ]
+                },
+
+                {
+                    "title": "Executive Assistants",
+                    "credits": [
+                        "Leander Rappmann",
+                        "Rosa Coco Schinagl"
+                    ]
+                },
+
+                {
+                    "title": "Participant Relations Managers",
+                    "credits": [
+                        "Hemma Crain",
+                        "Barbara Lutz",
+                        "Claudia Beate Reschke",
+                        "Labeira Galarza",
+                        "Tina Balla"
+                    ]
+                },
+
+                {
+                    "title": "Participant Relations Researchers",
+                    "credits": [
+                        "Delphi Breger",
+                        "Stefanie Freimuth",
+                        "Frederike Schinagl"
+                    ]
+                },
+
+                {
+                    "title": "Participant Relations Consultants",
+                    "credits": [
+                        "Thomas Hartmann",
+                        "Petra Stegmann"
+                    ]
+                },
+
+                {
+                    "title": "Questions Editor",
+                    "credits": [
+                        "Deborah Rogers"
+                    ]
+                },
+
+                {
+                    "title": "Art Directors",
+                    "credits": [
+                        "Johannes Koblenz",
+                        "Rupert Smyth"
+                    ]
+                },
+
+                {
+                    "title": "Designers",
+                    "credits": [
+                        "Ebon Heath",
+                        "Tina Hennefarth",
+                        "Lena Mahr"
+                    ]
+                },
+
+                {
+                    "title": "Image Researchers",
+                    "credits": [
+                        "Julia Berg",
+                        "Rachel de Joode",
+                        "Adrienn Meszaros",
+                        "Valerie Stahl von Stromberg"
+                    ]
+                },
+
+                {
+                    "title": "Writer-Editors",
+                    "credits": [
+                        "Joe Holden",
+                        "Valdis Wish"
+                    ]
+                },
+
+                {
+                    "title": "Writers",
+                    "credits": [
+                        "Susanna Forrest",
+                        "Hili Perlson",
+                        "Johannes Thumfart",
+                        "Marie Winfield"
+                    ]
+                },
+
+                {
+                    "title": "Print Managers",
+                    "credits": [
+                        "Alexander Müller",
+                        "Cordula Sieckmann"
+                    ]
+                },
+
+                {
+                    "title": "Creative Producer",
+                    "credits": [
+                        "Sandra Schaede"
+                    ]
+                },
+
+                {
+                    "title": "Film Editor",
+                    "credits": [
+                        "Robert Kummer"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Editor",
+                    "credits": [
+                        "Hendrik Löbbert"
+                    ]
+                },
+
+                {
+                    "title": "Post-production Supervisor",
+                    "credits": [
+                        "Jens Maier-Rothe"
+                    ]
+                },
+
+                {
+                    "title": "Web Developers",
+                    "credits": [
+                        "Oliver Berger",
+                        "Marco Stahl"
+                    ]
+                },
+
+                {
+                    "title": "Web Designer",
+                    "credits": [
+                        "Christine Müller"
+                    ]
+                },
+
+                {
+                    "title": "Programmer",
+                    "credits": [
+                        "Sven Helemann"
+                    ]
+                },
+
+                {
+                    "title": "Flash Designer",
+                    "credits": [
+                        "David Loehr"
+                    ]
+                },
+
+                {
+                    "title": "Information Architect",
+                    "credits": [
+                        "Matthias Weitbrecht"
+                    ]
+                },
+
+                {
+                    "title": "Web Consultant",
+                    "credits": [
+                        "James Kalbach"
+                    ]
+                },
+
+                {
+                    "title": "Deputy Director, Communications",
+                    "credits": [
+                        "Thomas Reemer"
+                    ]
+                },
+
+                {
+                    "title": "Communications Managers",
+                    "credits": [
+                        "Astrid von Diechmann",
+                        "Astrid Falter",
+                        "Daniel Kruse",
+                        "Lucie Menz",
+                        "Martina Wagner"
+                    ]
+                },
+
+                {
+                    "title": "Communications Assistants",
+                    "credits": [
+                        "Svenja Hintz",
+                        "Simone Schmidt",
+                        "Felipe Ferrari"
+                    ]
+                },
+
+                {
+                    "title": "Communications Consultants",
+                    "credits": [
+                        "Annette Barner",
+                        "Dagmar Seidel"
+                    ]
+                },
+
+                {
+                    "title": "I.T. Support",
+                    "credits": [
+                        "Alexander Marschall",
+                        "Stephan Hantigk"
+                    ]
+                },
+
+                {
+                    "title": "Logistics Support",
+                    "credits": [
+                        "Sasha Horsley",
+                        "Nina Hüskes"
+                    ]
+                },
+
+                {
+                    "title": "Catering",
+                    "credits": [
+                        "Martine Vernazobres",
+                        "Daniel Ben-Sorge"
+                    ]
+                },
+
+                {
+                    "title": "Human Resources",
+                    "credits": [
+                        "Reinhard Böse"
+                    ]
+                },
+
+                {
+                    "title": "Legal Services",
+                    "credits": [
+                        "Hogan &amp; Hartson Raue LLP"
+                    ]
+                },
+
+                {
+                    "title": "D.K.I. Director",
+                    "credits": [
+                        "Ceasar McDowell"
+                    ]
+                },
+
+                {
+                    "title": "Creative Director",
+                    "credits": [
+                        "Cindy Gantz"
+                    ]
+                },
+
+                {
+                    "title": "Creative Producer",
+                    "credits": [
+                        "Jackie Northway-Wallace"
+                    ]
+                },
+
+                {
+                    "title": "Project Consultant",
+                    "credits": [
+                        "Jacqui Lindsay"
+                    ]
+                },
+
+                {
+                    "title": "Co-director",
+                    "credits": [
+                        "Ellen Furnari"
+                    ]
+                },
+
+                {
+                    "title": "Project Associate",
+                    "credits": [
+                        "Ian Manheimer"
+                    ]
+                },
+
+                {
+                    "title": "Creative Consultants",
+                    "credits": [
+                        "Betsy Campbell",
+                        "Adam Werbach"
+                    ]
+                },
+
+                {
+                    "title": "Participant Relations",
+                    "credits": [
+                        "Tara Kurland"
+                    ]
+                },
+
+                {
+                    "title": "Project Coordinators",
+                    "credits": [
+                        "Nadine Friedman",
+                        "Patience Monroe"
+                    ]
+                },
+
+                {
+                    "title": "Project Developer",
+                    "credits": [
+                        "Dan Geiger"
+                    ]
+                },
+
+                {
+                    "title": "Communications Consultants",
+                    "credits": [
+                        "Colette Brooks",
+                        "Melinda Ann Farrell David Steuer"
+                    ]
+                },
+
+                {
+                    "title": "D.F.K.I. Chief Administrator",
+                    "credits": [
+                        "Stephan Busemann"
+                    ]
+                },
+
+                {
+                    "title": "Software Development Manager",
+                    "credits": [
+                        "Feiyu Xu"
+                    ]
+                },
+
+                {
+                    "title": "Software Development Administrator",
+                    "credits": [
+                        "Brigitte Jörg"
+                    ]
+                },
+
+                {
+                    "title": "Network Administrator",
+                    "credits": [
+                        "Markus Bolz"
+                    ]
+                },
+
+                {
+                    "title": "Transcription Supervisor",
+                    "credits": [
+                        "Jörg Steffen"
+                    ]
+                },
+
+                {
+                    "title": "Senior Software Engineer",
+                    "credits": [
+                        "Witold Drozdzynski"
+                    ]
+                },
+
+                {
+                    "title": "Software Engineers",
+                    "credits": [
+                        "Bernd Kiefer",
+                        "Volker Morbach"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Software Engineer",
+                    "credits": [
+                        "Robert Barbey"
+                    ]
+                },
+
+                {
+                    "title": "Assistant Content Developers",
+                    "credits": [
+                        "Elizabeth de Sousa Pinto",
+                        "Christian Schreyer"
+                    ]
+                },
+
+                {
+                    "title": "Technical Consultants",
+                    "credits": [
+                        "Georg Demme",
+                        "Rainer Jochem"
+                    ]
+                },
+
+                {
+                    "title": "Translation &amp; Transcription by",
+                    "credits": [
+                        "Zaki Al Saadawi",
+                        "Nadja Altabari",
+                        "Nader Altabari",
+                        "Urbain Atsague Tchino",
+                        "Elisa Azevedo",
+                        "Anja Borowski",
+                        "Lina Cepurnaite",
+                        "Yu Chen",
+                        "Irina Chyzh",
+                        "Olha Condor",
+                        "Elizabeth de Sousa Pinto",
+                        "Astrid Felsner",
+                        "Anne Gorius",
+                        "Esther Fränken",
+                        "Hanno Gorius",
+                        "Olga Grigorieva",
+                        "Tina Hadamitzky",
+                        "Christine Knauss",
+                        "Ana Leiner Rivera",
+                        "Dennis Leser",
+                        "Michiko Masuch-Furukawa",
+                        "Marcelo Matoso Silveira",
+                        "Markus Mesmer",
+                        "Heike Mi&szlig;ler",
+                        "Kateryna Mysak",
+                        "Kristina Ohr",
+                        "Daniel Salariu",
+                        "Bärbel Schlimbach",
+                        "Oliver Schumacher",
+                        "Judith Selig",
+                        "Atsuko Shimada",
+                        "Ryoko Shimizu",
+                        "Yordanka Staab",
+                        "Sascha Sudik",
+                        "Min Ye",
+                        "Chaoqun Zhu"
+                    ]
+                },
+
+                {
+                    "title": "The Table of Free Voices Volunteers",
+                    "credits": [
+                        "Max Adam",
+                        "Mona Agbalaka",
+                        "Rebecca Agbodjan",
+                        "Sara Ahmed",
+                        "Iman Al-Barwani",
+                        "Christabelle Aranha",
+                        "Asuka Ashida",
+                        "Ulla Baylührssen",
+                        "Dirk Beckmann",
+                        "Ximena Benavente",
+                        "Che Bergendahl",
+                        "Moritz Bittner",
+                        "Emily Bowden",
+                        "Judith Brunk",
+                        "Véronique Cabois",
+                        "Benjamin Cantu",
+                        "Pascal Casper",
+                        "Bernhard Chwalka",
+                        "Gita Cooper-van Ingen",
+                        "Seumas Coutts",
+                        "Eva-Maria Damm",
+                        "Angela Dansie",
+                        "Janine Deutsche",
+                        "Mark Eberhardt",
+                        "Arne Eichberg",
+                        "Ludwig Engel",
+                        "Miriam Fa&szlig;bender",
+                        "Marcus Entelmann",
+                        "Jens Feddersen",
+                        "Filine Fink",
+                        "Mareike Franczak",
+                        "Mario Garcia",
+                        "Philipp Garra",
+                        "Julian Gaynor",
+                        "Juliana Gonzales",
+                        "Seth Greenwald",
+                        "Ruth Gugliemi",
+                        "Korina Gutsche",
+                        "Philipp Hartmann",
+                        "Nicholas Hasko",
+                        "Julius Hassemer",
+                        "Joseph Heaven",
+                        "Fabian Heuer",
+                        "Tina Höfinghoff",
+                        "Meredith Holmgren",
+                        "Filiz Igret",
+                        "Simon Ilse",
+                        "Felix Ilse",
+                        "Neela Jayaramann",
+                        "Bernard Jungk",
+                        "Lena Junker",
+                        "Sebastian Kaul",
+                        "Antje Klein",
+                        "Johanna Kleinschrot",
+                        "Katharina Knaus",
+                        "Andrea Koc",
+                        "Philipp Köhn",
+                        "Astrid Kühne",
+                        "Adrian Künzel",
+                        "Carel Kuschke",
+                        "Yosra Labidi",
+                        "Merten Lagatz",
+                        "Daniel Lange",
+                        "Henri Laupmaa",
+                        "Susana Leal",
+                        "Anne-Sophie Levet",
+                        "Deborah Ligorio",
+                        "Lukas Mahr",
+                        "Rachel Michael",
+                        "Stefan Mixdorf",
+                        "Alejandro Monges",
+                        "Gal Mor",
+                        "Julia Mussgnug",
+                        "Lutz Neumann",
+                        "Lev Nordstrom",
+                        "Pascal Notz",
+                        "Dorit Nuriel",
+                        "Annette Ochs",
+                        "G&uuml;lseren &Ouml;lc&uuml;m",
+                        "Johanna Paul",
+                        "Julia Persitzky",
+                        "Inga Pfafferoth",
+                        "Frederik Pferdt",
+                        "Nadja Pietkowski",
+                        "Burkhard Piller",
+                        "Elisabeth Press",
+                        "Christiane Reinstrom",
+                        "Edina Ribic",
+                        "Angelina Richter",
+                        "Oliver Rizzi Carlson",
+                        "Denoal Rouaud",
+                        "Sylvia Ru&szlig;",
+                        "Frédérique Rouault",
+                        "Alejandra Santa",
+                        "Judy Schlesinger",
+                        "Astrid Schmidhuber",
+                        "Daniel Schmutzler",
+                        "Katja Sommer",
+                        "Janina Sprenger",
+                        "Sebastian Stache",
+                        "Sven Stephani",
+                        "Alexander Stetter",
+                        "Jörg Suckow",
+                        "Karumuttu Sundaram",
+                        "Joni Taylor",
+                        "Uwe Thomas",
+                        "Dave Tinning",
+                        "Alvin Tong",
+                        "Tülin &Uuml;zsacan",
+                        "Maarten Vermeiren",
+                        "Christian Vogel",
+                        "Christina Voigt",
+                        "Arist von Hehn",
+                        "Marius von Holleben",
+                        "Juliane Wagner",
+                        "Michael Weber",
+                        "Philipp Weidemann",
+                        "Mirjam Wenzel",
+                        "Kaj Wibier",
+                        "Marcin Wieczorek",
+                        "Thorsten Wiesemann",
+                        "Jonna Winger",
+                        "Philipp Wittulsky",
+                        "Alexander Wolf",
+                        "Maria Elena Zayas",
+                        "Crisjan Zöllner"
+                    ]
+                },
+
+                {
+                    "title": "Volunteer Team Coordinators",
+                    "credits": [
+                        "Clémentine Charlemaine",
+                        "Desiree Zwanck",
+                        "Sonja Schreiner"
+                    ]
+                },
+
+                {
+                    "title": "Guest Management by",
+                    "credits": [
+                        "Irena Akopjan",
+                        "Paz Làzaro",
+                        "Heike Lamm",
+                        "Winfried Weiss"
+                    ]
+                },
+
+                {
+                    "title": "Guest Hospitality by",
+                    "credits": [
+                        "Humboldt University of Berlin",
+                        "Hotel InterContinental Berlin",
+                        "Hotel de Rome"
+                    ]
+                },
+
+                {
+                    "title": "Organizational Supporters",
+                    "credits": [
+                        "Aktion Weisses Friedensband",
+                        "Ashoka",
+                        "BiG Imagination Group",
+                        "The City of Berlin",
+                        "Bundeszentrale für politische Bildung",
+                        "Cinema for Peace",
+                        "The Club of Budapest",
+                        "Creative Commons",
+                        "Deutsche Gesellschaft für Technische Zusammenarbeit GmbH (GTZ)",
+                        "Deutsche Forschungszentrum für Künstliche Intelligenz (DFKI)",
+                        "The European Institute for the Media",
+                        "The Foundation for International Community Assistance (FINCA International)",
+                        "GhandiServe foundation",
+                        "Global Resource Action Center for the Environment (GRACE)",
+                        "The Goethe-Institut (GI)",
+                        "Greenpeace",
+                        "The Institute for Agriculture and Trade Policy",
+                        "The International Forum on Globalization (IFG)",
+                        "Internationales Literaturfestival Berlin",
+                        "Internet Archive",
+                        "Link TV",
+                        "Media Access Project",
+                        "n-tv",
+                        "Outpost Digital",
+                        "Peace Women Across the Globe",
+                        "People for the American Way",
+                        "Pleon GmbH",
+                        "@radical.media",
+                        "Rainforest Action Network",
+                        "Saarland University",
+                        "Schmidt und Kaiser Kommunikationsberatung",
+                        "The Stewart R. Mott Foundation",
+                        "Teen Talking Circles",
+                        "Tibet House",
+                        "Tides Center",
+                        "triggerhappyproductions",
+                        "TT30",
+                        "United Nations Development Programme (UNDP)",
+                        "Zentrum für Kunst und Medientechnologie Karlsruhe (ZKM)"
+                    ]
+                },
+
+                {
+                    "title": "Special Thanks",
+                    "credits": [
+                        "Allianz Group",
+                        "The Mark and Sharon Bloome Foundation",
+                        "The John M. O'Quinn Foundation",
+                        "The Joy Family Foundation",
+                        "The Wallace Global Fund",
+                        "Volkswagen AG",
+                        "&amp;",
+                        "everyone who ever gave us a donation",
+                        "",
+                        "Sebastião Salgado",
+                        "Siri Hustvedt",
+                        "Qin Chuan",
+                        "Tanya Scott",
+                        "Naseem Salaam",
+                        "Shanta Chatterji",
+                        "Mara",
+                        "Elliot Chikoma",
+                        "Daryl Hannah",
+                        "Arik W. Ascherman",
+                        "Frederick Wedin",
+                        "Juana Rodriguez",
+                        "Najo",
+                        "Laurie Anderson",
+                        "Judy Twedt",
+                        "Mikki Brammer",
+                        "Tom Henze",
+                        "Adrienn Meszaros",
+                        "Moise Marabout",
+                        "Arundhati Roy",
+                        "Sara Francis",
+                        "Nancy Clemons",
+                        "Miraj Khaled",
+                        "Kieth Dierkx",
+                        "&amp;",
+                        "everyone who ever gave us a question"
+                    ]
+                },
+
+                {
+                    "title": "Very Special Thanks",
+                    "credits": [
+                        "Hafsat Abiola",
+                        "Anthony Arnove",
+                        "Joe Berlinger",
+                        "Sabine Christiansen",
+                        "Robbie Conal",
+                        "Ray Cooper",
+                        "Brenda Coughlin",
+                        "Willem Dafoe",
+                        "Hans Peter-Dürr",
+                        "Ute &amp; Roland Emmerich",
+                        "Fang Lijun",
+                        "Giora Feidman",
+                        "Dagmar Forelle",
+                        "Ellen Furnari",
+                        "Cindy Gantz",
+                        "Susan George",
+                        "Don Hazen",
+                        "Allan Hunt-Badiner",
+                        "Bianca Jagger",
+                        "Matthias Hohlbach",
+                        "Oliver Kaiser",
+                        "Jon Kamen",
+                        "Andreas &amp; Justine Läufer",
+                        "Lawrence Lessig",
+                        "Yungchen Lhamo",
+                        "Jacqui Lindsay",
+                        "Angaangaq Lyberth",
+                        "Vicky Malo",
+                        "Jerry Mander",
+                        "Alex &amp; Vida Marashian",
+                        "Ceasar McDowell",
+                        "Jonathan Meese",
+                        "Eva Meier-Schönung",
+                        "Anuradha Mittal",
+                        "Jackie Northway-Wallace",
+                        "Alexander Ochs",
+                        "Oscar Olivera",
+                        "Sydney Possuelo",
+                        "Peter Raue",
+                        "Theo Reichert",
+                        "Wolfgang Riehn",
+                        "Felix Servas",
+                        "Heinz Siepmann",
+                        "Eva Stein",
+                        "Frank-Walter Steinmeier",
+                        "Josh Taft",
+                        "Nicolai Tewes",
+                        "Robert Thurman",
+                        "Hans Uszkoreit",
+                        "Randall Wallace",
+                        "Kurt Weidemann",
+                        "Stephan Vens",
+                        "Martine Vernazobres",
+                        "Wim &amp; Donata Wenders",
+                        "Gordon Wojcickowski",
+                        "Yang Shaobin",
+                        "Joseph Zen Ze-kiun"
+                    ]
+                }
+            ]
+        },
+
+
+
+
+        {
+            "name": "dropping knowledge",
+            "items": [{
+                "title": "dropping knowledge",
+                "subtitle": "founded by",
+                "credits": [
+                    "the City of Berlin",
+                    "&amp;",
+                    "all of our children",
+                    "&amp;",
+                    "all of our parents"
+                ]
+            }]
+        }
+
+    ]
+}

@@ -1,0 +1,13 @@
+<div id="questions">
+    <ul>
+        {% for index, question in page.data.questions %}
+        <li>
+            <header>Question</header>
+            <a href="{{question.url}}" target="_blank" title="CONNECT TO THIS QUESTION">
+                <strong>{{question.text}}</strong>
+                <cite>&mdash; {{question.source}}</cite>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,41 @@
+<div id="credits">
+
+    <img data-src="/media/images/problema-small-title-bw.png" alt="PROBLEMA" />
+
+    {% for index, list in page.data.lists %}
+
+    <section class="group {{list.name}}">
+
+        {% for item in list.items %}
+
+        <section>
+
+            {% if item.title %}
+            <h3>{{item.title}}</h3>
+            {% endif %} 
+            
+            {% if item.subtitle %}
+            <i>{{item.subtitle}}</i>
+            {% endif %}
+            
+            <ol>
+                {% for index, credit in item.credits %}
+
+                <li>
+                    {{credit}}
+                </li>
+                
+                {% endfor %}
+            </ol>
+
+        </section>
+
+        {% endfor %}
+
+    </section>
+
+    {% endfor %}
+
+    <img data-src="/media/images/credits-logos.png" alt="sponsors" />
+
+</div>

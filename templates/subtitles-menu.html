@@ -1,0 +1,17 @@
+<div class="subtitle-menu">
+    <img src="/media/images/problema_title_small.png" />
+
+    {{each list}}
+    <ul class="list-{{list}}">
+        {{#each item}}
+        <li>
+            <a data-srtfile="{{srtfile}}" title="{{capitalizeFirst language}}">
+                <img src="./media/images/subtitle-menu/{{lowercase language}}.png" alt="{{capitalizeFirst language}}" />
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/each}} 
+
+ 
+</div>

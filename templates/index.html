@@ -12,7 +12,7 @@
     <meta property="og:url" content="http://www.problema-thefilm.org" />
     <meta property="og:site_name" content="PROBLEMA the film" />
     <meta property="og:description" content="An unprecedented philosophical art cinema experience, PROBLEMA is a film that looks at you as you watch it, that speaks to you in a multilingual mantra made of the voices, insights, perceptions and reflections of over 100 people sat together at the world's largest round table." />
-    <link rel="stylesheet" type="text/css" href="styles">
+    <link rel="stylesheet" type="text/css" href="./styles">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
 
     <header>
         <div class="poster">
-            <img class="background" src="/media/images/poster.jpg" alt="artwork" />
-            <img class="logo" src="/media/images/logo.png" alt="PROBLEMA" />
+            <img class="background" data-src="/media/images/poster.jpg" alt="artwork" />
+            <img class="logo" data-src="/media/images/logo.png" alt="PROBLEMA" />
             <a id="content-anchor"></a>
         </div>
     </header>
@@ -35,7 +35,6 @@
 
     <main>
         {% block content %}
-        <h1>problema</h1>
         {% endblock content %}
     </main>
 
