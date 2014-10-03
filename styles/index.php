@@ -1,5 +1,5 @@
 <?php
-require_once '../vendor/less.php/Less.php';
+require_once '../vendor/less/Less.php';
 
 if (!ini_get('date.timezone')) {
     date_default_timezone_set('GMT');

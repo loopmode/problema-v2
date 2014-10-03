@@ -1,7 +1,7 @@
 {
-    "lists": [
+    "credits": [
         {
-            "list": "problema",
+            "name": "problema",
             "items": [
 
                 {
@@ -322,7 +322,7 @@
         },
 
         {
-            "list": "music",
+            "name": "music",
             "items": [{
                     "title": "Downbeat",
                     "info": [
@@ -443,7 +443,7 @@
 
 
         {
-            "list": "table of free voices",
+            "name": "table of free voices",
             "items": [{
                     "title": "Directed by",
                     "credits": [
@@ -1408,7 +1408,7 @@
 
 
         {
-            "list": "dropping knowledge",
+            "name": "dropping knowledge",
             "items": [{
                 "title": "dropping knowledge",
                 "subtitle": "founded by",

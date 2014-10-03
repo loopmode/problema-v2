@@ -1,7 +1,7 @@
 {
-    "lists": [
+    "cast": [
         {
-            "list": "moderators",
+            "name": "moderators",
             "items": [
                 {
                     "vimeoid": "58987381" ,
@@ -23,7 +23,7 @@
         },
 
         {
-            "list": "participants",
+            "name": "participants",
             "items": [
                 {
                     "vimeoid": "59062760",

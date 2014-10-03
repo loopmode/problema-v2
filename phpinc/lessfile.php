@@ -5,7 +5,7 @@
  * @author Jovica Aleksic
 */
 
-require_once '../vendor/less.php/Less.php';
+require_once '../vendor/less/Less.php';
 
 class lessfile {
 	

@@ -18,24 +18,29 @@
 <body>
 
     <nav class="dropdown">
-        <?php include "templates/nav.html"; ?>
+        {% include "templates/navigation.html" %}
     </nav>
 
     <header>
-        <!-- POSTER -->
-        <!-- LOGO -->
+        <div class="poster">
+            <img class="background" src="/media/images/poster.jpg" alt="artwork" />
+            <img class="logo" src="/media/images/logo.png" alt="PROBLEMA" />
+            <a id="content-anchor"></a>
+        </div>
     </header>
 
     <nav class="horizontal">
-        <!-- HORIZONTAL NAV -->
+        {% include "templates/navigation.html" %}
     </nav>
 
     <main>
-        <!-- PAGE CONTENTS -->
+        {% block content %}
+        <h1>problema</h1>
+        {% endblock content %}
     </main>
 
     <footer>
-        <!-- FOOTER LINKS -->
+        {% include "templates/footer.html" %}
     </footer>
 
 </body>
