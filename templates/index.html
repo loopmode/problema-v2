@@ -12,6 +12,7 @@
     <meta property="og:url" content="http://www.problema-thefilm.org" />
     <meta property="og:site_name" content="PROBLEMA the film" />
     <meta property="og:description" content="An unprecedented philosophical art cinema experience, PROBLEMA is a film that looks at you as you watch it, that speaks to you in a multilingual mantra made of the voices, insights, perceptions and reflections of over 100 people sat together at the world's largest round table." />
+
     <link rel="stylesheet" type="text/css" href="./styles">
 </head>
 
@@ -23,8 +24,8 @@
 
     <header>
         <div class="poster">
-            <img class="background" data-src="/media/images/poster.jpg" alt="artwork" />
-            <img class="logo" data-src="/media/images/logo.png" alt="PROBLEMA" />
+            <img class="background" src="images/problema-bg-960.jpg" alt="artwork" />
+            <img class="logo" src="images/problema-branding.png" alt="PROBLEMA" />
             <a id="content-anchor"></a>
         </div>
     </header>
@@ -34,13 +35,31 @@
     </nav>
 
     <main>
-        {% block content %}
-        {% endblock content %}
+        <div class="container">
+            {% block content %} {% endblock content %}
+        </div>
     </main>
 
-    <footer>
-        {% include "templates/footer.html" %}
-    </footer>
+
+    {% include "templates/footer.html" %}
+
+    <script type="text/javascript">
+    /*
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18833272-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    */
+    </script>
+
+    <script src="./scripts/lib/require.js" data-main="./scripts/main"></script>
 
 </body>
 

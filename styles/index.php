@@ -8,17 +8,6 @@ if (!ini_get('date.timezone')) {
 try {
 	header("Content-type: text/css");
 
-	/*
-	$parser = new Less_Parser();
-	$parser->SetImportDirs( array(
-		'../scripts/vendor/bootstrap/less/' => ''
-	));
-	$parser->parseFile( './less/problema.less', '/styles/' );
-	$css = $parser->getCss();
-	echo $css;
-	*/
-
-
 	$cache_dir = '.cache';
 	$import_dirs = array(
 		'../scripts/vendor/bootstrap/less/' => ''

@@ -10,7 +10,7 @@
         {% for person in list.items %}
 
         <li class="person">
-            <img data-src="{{ person.image }}">id
+            <img data-src="{{ person.image }}" alt="{{ person.firstName }} {{ person.lastName }}">
             <div class="name">{{ person.firstName }} {{ person.lastName }}</div>
             <div class="nation">{{ person.nation }}</div>
             <div class="info">{{ person.info }}</div>
