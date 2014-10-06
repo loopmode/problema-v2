@@ -2,10 +2,12 @@
 
 require './vendor/h2o/h2o.php';
 
+
+
 // pageId - determine which page to show
 //----------------------------------------------------------
 $pageId = 'index';
-$isAjaxRequest = isset($_GET['ajax']);
+$isAjaxRequest = isset($_SERVER['HTTP_X_REQUESTED_WITH']);
 
 if (isset($_GET['page'])) {
 	$pageId = $_GET['page'];
@@ -13,10 +15,7 @@ if (isset($_GET['page'])) {
 		$pageId = '404';
 	}
 }
-
-
-
-
+ 
 
 // render page
 //----------------------------------------------------------
@@ -29,10 +28,7 @@ echo $html;
 
 
 
-
-
-
-// helper functions
+// template helpers
 //----------------------------------------------------------
 function templatePath($pageId, $isAjaxRequest=false) {
 	$dir = './';
@@ -40,7 +36,6 @@ function templatePath($pageId, $isAjaxRequest=false) {
 
 	switch ($pageId) {
 		case 'index':
-		case '404':
 			$dir .= 'templates';
 			$file = $pageId . '.html';
 			break;

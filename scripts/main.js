@@ -10,7 +10,7 @@
 			'backbone-super' : 'lib/backbone-super-min',
 			'underscore' : 'lib/underscore-min',
 			'jquery' : 'lib/jquery-1.11.0',
-			'bootstrap': 'lib/bootstrap.min',
+			'bootstrap': 'lib/bootstrap/dist/js/bootstrap.min',
 			'normalize': 'lib/normalize',
 			'backstretch': 'lib/jquery.backstretch.min',
 			'handlebars' : 'lib/handlebars-v1.3.0',
@@ -47,8 +47,12 @@
 		}
 	});
 	
-	require(['app/utils/normalize', 'backbone-super', 'bootstrap'], function() {
-		
+	require(['jquery', 'bootstrap', 'backbone-super', 'app/utils/normalize'], function() {
+		require(['app/app'], function(App) {
+			$(function() {
+				window.app = new App();
+			});
+		});
 	});
 
 }());

@@ -10,7 +10,7 @@ try {
 
 	$cache_dir = '.cache';
 	$import_dirs = array(
-		'../scripts/vendor/bootstrap/less/' => ''
+		'../scripts/lib/bootstrap/less/' => ''
 	);
 	$less_files = array( './less/problema.less' => '/styles/' );
 	$options = array(
