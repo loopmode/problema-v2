@@ -18,7 +18,7 @@ define([
 
         setRoute: function(route) {
 
-            if (route !== this.currentRoute) {
+            if (route && route !== this.currentRoute) {
                 this.currentRoute = route;
 
                 var content = this.contentElement,

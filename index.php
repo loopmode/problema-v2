@@ -1,17 +1,21 @@
 <?php
 
-require './vendor/h2o/h2o.php';
+if (isset($_GET['clearcache'])) {
+	array_map('unlink', glob(dirname(__FILE__) . '/.cache/*'));
+	die('cache cleared');
+}
 
+
+require './vendor/h2o/h2o.php';
 
 
 // pageId - determine which page to show
 //----------------------------------------------------------
 $pageId = 'index';
 $isAjaxRequest = isset($_SERVER['HTTP_X_REQUESTED_WITH']);
-
 if (isset($_GET['page'])) {
 	$pageId = $_GET['page'];
-	if (!file_exists(templatePath($pageId))) {
+	if (!file_exists(templateFile($pageId))) {
 		$pageId = '404';
 	}
 }
@@ -19,10 +23,13 @@ if (isset($_GET['page'])) {
 
 // render page
 //----------------------------------------------------------
-$template = new H2o(templatePath($pageId, $isAjaxRequest), array(
-    'cache_dir' => './tmp'
+$file = templateFile($pageId, $isAjaxRequest);
+$data = templateData($pageId);
+$template = new H2o($file, array(
+    'cache_dir' => dirname(__FILE__) . '/.cache'
 )); 
-$page = templateData($pageId);
+
+$page = $data;
 $html = $template->render(compact('page'));
 echo $html;
 
@@ -30,21 +37,15 @@ echo $html;
 
 // template helpers
 //----------------------------------------------------------
-function templatePath($pageId, $isAjaxRequest=false) {
-	$dir = './';
-	$file = '';
-
+function templateFile($pageId, $isAjaxRequest=false) {
 	switch ($pageId) {
 		case 'index':
-			$dir .= 'templates';
-			$file = $pageId . '.html';
-			break;
+			return './templates/index.html';
 		default: 
-			$dir .= 'pages/' . $pageId;
+			$dir = './pages/' . $pageId;
 			$file = $isAjaxRequest ? 'content.html' : 'index.html';
+			return $dir . '/' . $file;
 	}	
-
-	return $dir . '/' . $file;
 } 
 function templateData($pageId) {
 	$data = array(
