@@ -1,7 +1,11 @@
 <?php
-$base = dirname(__FILE__) . '/../../';
-
-require_once $base . 'vendor/less/Less.php';
+$path = dirname(__FILE__) . '/../../';
+$configFile = $path . 'config.json';
+$config = json_decode(file_get_contents($configFile)); 
+$webroot = $config->root;
+ 
+require_once $path . 'lib/less/Less.php';
+ 
 
 if (!ini_get('date.timezone')) {
     date_default_timezone_set('GMT');
@@ -11,16 +15,27 @@ try {
 	header("Content-type: text/css");
 
 	$options = array(
-		'cache_dir' => $base . '.cache', 
+		'cache_dir' => $path . '.cache', 
 		'import_dirs' => array(
-			//$base . 'media/scripts/lib/bootstrap/less/' => ''
+			$path . 'media/fonts/' => $webroot . '/media/fonts/'
 		),
-		'compress'=>true 
+
+		'compress'=>true,	
+		
+		'sourceMap' => true,
+		
+		'sourceMapWriteTo'  => $path . '/media/styles/problema.min.map',
+    	'sourceMapURL'      => $webroot . '/media/styles/problema.min.map',
+
+    	'sourceMapBasepath' => str_replace('\\', '/', realpath($path)),
+    	'sourceMapRootpath' => $webroot,
 	);
-	
+ 
 	//print_r($options);die;
 
-	$less_files = array( $base . 'less/problema.less' => $base . 'media/styles/' );
+	$less_files = array(
+		$path . 'less/problema.less' => $webroot. 'media/styles/'
+	);
 	$css_file_name = Less_Cache::Get( $less_files, $options );
 
 	$compiled = file_get_contents( $options['cache_dir'] . '/' . $css_file_name );

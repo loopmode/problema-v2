@@ -1,18 +1,15 @@
 <?php
 
 if (isset($_GET['clearcache'])) {
-	array_map('unlink', glob(dirname(__FILE__) . '/.cache/*'));
-	die('cache cleared');
+	require('clearcache.php');
+	exit;
 }
-
-
-require './vendor/h2o/h2o.php';
-
+ 
+require('./lib/h2o/h2o.php');
 
 // pageId - determine which page to show
 //----------------------------------------------------------
 $pageId = 'index';
-$isAjaxRequest = isset($_SERVER['HTTP_X_REQUESTED_WITH']);
 if (isset($_GET['page'])) {
 	$pageId = $_GET['page'];
 	if (!file_exists(templateFile($pageId))) {
@@ -23,13 +20,14 @@ if (isset($_GET['page'])) {
 
 // render page
 //----------------------------------------------------------
-$file = templateFile($pageId, $isAjaxRequest);
+$file = templateFile($pageId);
 $data = templateData($pageId);
 $template = new H2o($file, array(
-    'cache_dir' => dirname(__FILE__) . '/.cache'
+    'cache_dir' => dirname(__FILE__) . '/.cache',
+    'autoescape' => false
 )); 
 
-$page = $data;
+$page = $data; 
 $html = $template->render(compact('page'));
 echo $html;
 
@@ -37,7 +35,8 @@ echo $html;
 
 // template helpers
 //----------------------------------------------------------
-function templateFile($pageId, $isAjaxRequest=false) {
+function templateFile($pageId) {
+	$isAjaxRequest = isset($_SERVER['HTTP_X_REQUESTED_WITH']);
 	switch ($pageId) {
 		case 'index':
 			return './templates/index.html';
@@ -51,6 +50,7 @@ function templateData($pageId) {
 	$data = array(
 		'id' => $pageId
 	);
+
 	$file = './pages/' . $pageId . '/data.json';
 	if (file_exists($file)) {
 		$data['data'] = json_decode(file_get_contents($file), true);
