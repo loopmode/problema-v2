@@ -1,29 +1,30 @@
-#intro {
+body > header {
     position: relative;
     /* prevent horizontal scrollbar due to absolutely positioned branding overflow */
     overflow: hidden;
 }
 
-#intro .background {
+.poster {
+    position: relative;
+}
+.poster-background {
     position: relative;
     top: 0;
     left: 0;
     z-index: 0; 
 }
-
-#intro .background img {
-    width: 100%;
-}
-
-#intro .branding {
+.logo-container {
     position: absolute;
-    top: 320px;
-    width: 100%;
+    top: 40%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    transition: top 3s;
+}
+.poster-logo {
+    display: inline;
+    width: 75%;
     z-index: 1;
     text-align: center;
-}
-#intro .branding img {
-    width:75%;
-}
-
-
+} 
+ 

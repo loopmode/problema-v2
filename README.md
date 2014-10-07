@@ -10,3 +10,14 @@
 ## data
 
 If a page needs additional data for rendering, a `data.json` file should be placed within the page folder. It will be provided to the h2o template automatically.
+
+# libraries
+
+## php
+
+- http://www.h2o-template.org
+- https://github.com/oyejorge/less.php
+
+## javascript
+
+- https://github.com/wagerfield/parallax

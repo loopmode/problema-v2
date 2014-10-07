@@ -13,53 +13,62 @@
     <meta property="og:site_name" content="PROBLEMA the film" />
     <meta property="og:description" content="An unprecedented philosophical art cinema experience, PROBLEMA is a film that looks at you as you watch it, that speaks to you in a multilingual mantra made of the voices, insights, perceptions and reflections of over 100 people sat together at the world's largest round table." />
 
-    <link rel="stylesheet" type="text/css" href="media/styles">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="media/styles" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <nav class="dropdown">
-        {% include "templates/navigation.html" %}
+        {% include "templates/partials/navigation.html" %}
     </nav>
 
     <header>
-        <div class="poster">
-            <img class="background" src="media/images/problema-bg-960.jpg" alt="artwork" />
-            <img class="logo" src="media/images/problema-branding.png" alt="PROBLEMA" />
-            <a id="content-anchor"></a>
+        <div class="poster container">
+            <div class="layer poster-background">
+                <img src="media/images/problema-bg-960.jpg" alt="artwork" />
+            </div>
+            <div class="layer poster-logo">
+                <a href="/">
+                    <img src="media/images/problema-branding.png" alt="PROBLEMA" />
+                </a>
+            </div>
         </div>
     </header>
 
     <nav class="horizontal">
-        {% include "templates/navigation.html" %}
+        {% include "templates/partials/navigation.html" %}
     </nav>
 
     <main>
         <div class="container" id="content">
-            {% block content %} {% endblock content %}
+            <div class="spinner-container">
+            {% include "templates/partials/spinner.html" %}
+            </div>
+            {% block content %} {% endblock content %}            
         </div>
     </main>
 
 
-    {% include "templates/footer.html" %}
+    {% include "templates/partials/footer.html" %}
 
     <script type="text/javascript">
     /*
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-18833272-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-    */
+                        var _gaq = _gaq || [];
+                        _gaq.push(['_setAccount', 'UA-18833272-1']);
+                        _gaq.push(['_trackPageview']);
+                        (function() {
+                            var ga = document.createElement('script');
+                            ga.type = 'text/javascript';
+                            ga.async = true;
+                            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(ga, s);
+                        })();
+                        */
     </script>
 
-    <script src="media/scripts/lib/require.js" data-main="media/scripts/main"></script>
+    <script src="scripts/lib/require.js" data-main="scripts/setup"></script>
 
 </body>
 
