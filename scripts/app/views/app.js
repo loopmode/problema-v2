@@ -1,40 +1,65 @@
 define([
+    'amplify',
     'jquery',
     'backbone',
     'app/views/page',
     'app/views/poster',
     'app/views/spinner'
-], function($, Backbone, Page, Poster, Spinner) {
+], function(amplify, $, Backbone, Page, Poster, Spinner) {
 
     var AppView = Backbone.View.extend({
 
         el: 'body',
 
         defaults: {
-            minContentHeight: 400
+            minContentHeight: 600,
+            introDebounceTime: 5000,
+            scrollDuration: 500
         },
 
+        events: {
+            'click a[href^="/"]': 'handleLink',
+            'click .nav-dropdown a[href^="/"]': 'scrollToContent'
+        },
+
+        currentPage: undefined,
+        currentRoute: undefined,
+        currentlyLoadingPage: undefined,
+
         initialize: function(options) {
-
-            this._super.call(this, options);
             this.options = $.extend(true, {}, this.defaults, options);
+            this.createChildren();
+            this.sanitizeLinks('nav');
 
-            this.contentElement = this.$('main');
+            setTimeout(this.intro.bind(this), 0);
+        },
+
+        intro: function() {
+            var now = new Date().getTime(),
+                lastStarted = amplify.store('lastStarted'),
+                elapsedTime = now - (lastStarted || 0),
+                introDuration = 'short';
+
+            if (Backbone.history.fragment) {
+                this.scrollToContent(0);
+
+            } else {
+                if (elapsedTime > this.options.introDebounceTime) {
+                    introDuration = 'long';
+                }
+            }
+
+            this.$el.addClass('intro-' + introDuration + ' ready');
+            this.showPage('/' + Backbone.history.fragment);
+
+            amplify.store('lastStarted', now);
+            this.lastStarted = lastStarted;
+        },
+
+        createChildren: function() {
+            this.$main = this.$('main');
             this.poster = new Poster();
-            this.spinner = new Spinner({
-                el: '#content .spinner-container',
-                container: $('#content')
-            });
-
-            this.sweepLinks();
-            $(document).on('click', 'a[href^="/"]', this.handleLink.bind(this));
-
-
-            setTimeout(function() {
-                // initial route handling
-                this.showPage('/' + Backbone.history.fragment);
-            }.bind(this), 0);
-
+            this.spinner = new Spinner();
         },
 
         handleLink: function(e) {
@@ -48,40 +73,75 @@ define([
 
         showPage: function(route) {
 
-            if (route && route !== this.currentRoute) {
-
-                this.currentRoute = route;
-
-                var content = this.contentElement,
-                    oldPage = this.currentPage,
-                    newPage = new Page({
-                        route: route // === '/' ? 'home' : route
-                    });
-
-                var showNewPage = function() {
-                    this.currentPage = newPage;
-                    this.spinner.show();
-                    newPage.load().then(function() {
-                        content.css('min-height', Math.max(this.options.minContentHeight, newPage.$el.height()));
-                        this.spinner.hide().then(function() {
-                            newPage.show();
-                        });
-                        this.sweepLinks(newPage.$el);
-                    }.bind(this));
-                }.bind(this);
-
-                if (oldPage) {
-                    content.css('min-height', Math.max(this.options.minContentHeight, oldPage.$el.height()));
-                    oldPage.hide().then(showNewPage);
-                } else {
-                    showNewPage();
-                }
+            if (route === undefined || route === this.currentRoute) {
+                return;
             }
+
+            var self = this,
+                minHeight = this.options.minContentHeight,
+                oldPage = this.currentPage,
+                newPage = new Page({
+                    route: route
+                });
+
+            function showNewPage() {
+                if (self.currentlyLoadingPage) {
+                    self.currentlyLoadingPage.abort();
+                }
+
+                self.currentlyLoadingPage = newPage;
+                self.currentRoute = route;
+                self.currentPage = newPage;
+                self.spinner.show();
+              //  self.scrollToContent();
+
+                newPage
+                    .load()
+                    .then(function() {
+                        self.currentlyLoadingPage = undefined;
+                        self.$main.css('min-height', Math.max(minHeight, newPage.$el.height()));
+                        self.spinner
+                            .hide()
+                            .then(function() {
+                                newPage.show();
+                            });
+                        self.sanitizeLinks(newPage.$el);
+                    });
+            }
+
+            if (oldPage === undefined) {
+                showNewPage();
+            } else {
+                this.$main.css('min-height', Math.max(minHeight, oldPage.$el.height()));
+                oldPage
+                    .hide()
+                    .then(function() {
+                        showNewPage();
+                    });
+            }
+        },
+
+        scrollToContent: function() {
+
+            var body = $("html, body").stop().unbind(".e"),
+                dfd = $.Deferred(),
+                targetScroll = this.$('nav.nav-tabs').offset().top - 100;
+
+            // abort if user scrolls manually while animating!
+            body.bind("scroll.e mousedown.e DOMMouseScroll.e body.e keyup.e", function() {
+                body.stop().unbind(".e");
+            });
+
+            body.animate({
+                scrollTop: targetScroll
+            }, this.options.scrollDuration, function() {
+                body.unbind(".e");
+            });
 
         },
 
-
-        sweepLinks: function(target) {
+        /** TODO: should be obsolete in time... */
+        sanitizeLinks: function(target) {
             $(target || 'body').find('a[href*="?page="]').each(function(i, a) {
                 var fragment = a.href.split('?page=')[1];
                 if (fragment !== undefined) {

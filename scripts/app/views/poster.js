@@ -10,11 +10,11 @@ define([
             //this.options = $.extend(true, {}, this.defaults, options);
             this._super.call(this, options);
 
-            $(window).on('scroll', _.debounce(this.updatePosition.bind(this), 1000));
+           // $(window).on('scroll', _.debounce(this.updatePosition.bind(this), 1000));
         },
 
         updatePosition: function(e) {
-            console.log(this.$el);
+          //  console.log(this.$el);
         }
     });
 

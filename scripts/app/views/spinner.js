@@ -2,9 +2,9 @@ define(['underscore', 'jquery', 'backbone'], function(_, $, Backbone) {
 
     var Spinner = Backbone.View.extend({
         delay: 500,
-        initialize: function(options) {
-            this._super.call(this, options);
-            this.container = options.container;
+        el: '#content .spinner-container',
+        initialize: function() {
+            this.container = $('#content');
         },
         show: function() {
             var dfd = $.Deferred();

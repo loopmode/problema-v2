@@ -1,102 +1,11 @@
 //@import "bootstrap/bootstrap.less";
+@import "libs/prefixer.less";
+@import "variables.less";
+@import "reset.less";
 @import "base.less";
-@import "intro.less";
+@import "poster.less";
+@import "nav.less";
 @import 'spinner.less';
-  
-/*
-===================================================
 
-TOP NAV
-
-===================================================
-*/
- 
-
-#top-nav {
-    position: relative;
-    z-index: 2;
-}
-#top-nav ul {
-    padding: 0;
-}
-#top-nav ul li {
-    list-style-type: none;
-    margin: 0px;
-    position: relative;
-}
-#top-nav li a {
-    text-align: center;
-    background: black;
-    padding: 5px 10px;
-    width: 100%;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-nav > ul > li {
-    display: inline-block;
-}
-nav > ul > li > ul {
-    display: none;
-}
-
-
-
-
-@media (min-width: 481px) {
-    
-    #top-nav {
-        position: absolute;
-        left: 50%; 
-    }
-
-    #top-nav ul {
-        padding: 0;
-    }
-    #top-nav ul li {
-        list-style-type: none;
-        width: 120px;
-        margin: 0px;
-        position: relative;
-    }
-
-    /* toplevel menu */
-    #top-nav > ul {
-        display: block;
-        margin: 0 auto;
-        width: 364px;
-        position: relative;
-        left: -50%;
-    }
-
-    #top-nav > ul > li {
-        float: left;
-    }
-    #top-nav > ul > li + li {
-        margin-left: 1px;
-    }
-
-    #top-nav ul li ul {
-        display: none;
-    }
-    #top-nav ul li:hover ul {
-        display: block;
-    } 
-
-    #top-nav ul > li > li {
-        display: block;
-    }
-
-    #top-nav ul li li a:hover {
-        color: #ccc;
-    }
-
-}
-
-@media (min-width: 992px) {
-
-    #intro .branding {
-    }
-}
+@import "intro.less";
+     

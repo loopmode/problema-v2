@@ -18,8 +18,11 @@
 </head>
 
 <body>
+    <script>
+        document.body.className = 'js-enabled';
+    </script>
 
-    <nav class="dropdown">
+    <nav class="nav-dropdown">
         {% include "templates/partials/navigation.html" %}
     </nav>
 
@@ -36,7 +39,7 @@
         </div>
     </header>
 
-    <nav class="horizontal">
+    <nav class="nav-tabs">
         {% include "templates/partials/navigation.html" %}
     </nav>
 

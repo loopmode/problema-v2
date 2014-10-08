@@ -1,15 +1,24 @@
-define(['app/views/app', 'utils/responsive', 'app/router'], function(AppView, Responsive, AppRouter) {
+define([
+        'app/views/app',
+        'utils/responsive',
+        'app/router'
+    ],
+    function(AppView, Responsive, AppRouter) {
 
-    Responsive.watch('body');
+        var body = $('body');
 
-    $(function() {
+        Responsive.watch(body);
 
-        var appView = new AppView();
-        var router = new AppRouter();
-        
-        router.on('route', appView.showPage, appView);
+        $(function() {
 
-        require(['utils/phpcache']);
+            var appView = new AppView();
+            var router = new AppRouter();
 
+            router.on('route', appView.showPage, appView);
+ 
+            require(['utils/phpcache']);
+
+            window.app = appView;
+
+        });
     });
-});

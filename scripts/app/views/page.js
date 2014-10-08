@@ -13,7 +13,7 @@ define([
          * @property options.route {String}
          */
         defaults: {
-            animDuration: 500
+            animDuration: 650
         },
         
         initialize: function(options) {

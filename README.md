@@ -1,3 +1,10 @@
+# deployment
+
+copy via ftp.
+make sure to set the right hostname in project.config.json!!!
+
+
+
 # content pages
 
 ## conventions
@@ -21,3 +28,8 @@ If a page needs additional data for rendering, a `data.json` file should be plac
 ## javascript
 
 - https://github.com/rstacruz/jquery.transit
+
+## less
+
+- http://lesscss.org/
+- http://lessprefixer.com/

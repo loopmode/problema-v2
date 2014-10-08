@@ -5,7 +5,7 @@ if (isset($_GET['clearcache'])) {
 	exit;
 }
  
-require('./lib/h2o/h2o.php');
+require('./libs/h2o/h2o.php');
 
 // pageId - determine which page to show
 //----------------------------------------------------------

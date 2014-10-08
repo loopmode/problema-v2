@@ -7,7 +7,7 @@
      * magic notation for paths in dev mode.
      * anything in the path that comes after a pipe character will be ignored on localhost.
      * @param {Object<String.String>}
-     * @return {Object<String.String>} 
+     * @return {Object<String.String>}
      */
     function paths(source) {
         var search = /\|([-,.](min))/;
@@ -26,7 +26,13 @@
             'underscore': 'lib/underscore|-min',
             'jquery': 'lib/jquery-1.11.0|-min',
             'bootstrap-dropdown': 'lib/bootstrap/dropdown',
+            'bootstrap-hover-dropdown': 'lib/bootstrap-hover-dropdown|.min',
             'magnific-popup': 'lib/jquery.magnific-popup|.min',
+            'amplify': 'lib/amplify|.min',
+
+            /**
+             * use $.transition() instead of $.animate()!
+             */
             'transit': 'lib/jquery.transit|.min'
         }),
         shim: {
@@ -45,11 +51,17 @@
             },
             'bootstrap-dropdown': {
                 deps: ['jquery']
+            },
+            'bootstrap-hover-dropdown': {
+                deps: ['bootstrap-dropdown']
+            },
+            'amplify': {
+                exports: 'amplify'
             }
         }
     });
 
-    require(['backbone-super', 'bootstrap-dropdown', 'utils/normalize', 'transit'], function() {
+    require(['backbone-super', 'bootstrap-hover-dropdown', 'utils/normalize', 'transit'], function() {
 
         // setup is done, any anonymous dependencies should be loaded. 
         require(['problema']);

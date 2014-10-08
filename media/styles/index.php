@@ -4,7 +4,7 @@ $configFile = $path . 'config.json';
 $config = json_decode(file_get_contents($configFile)); 
 $webroot = $config->root;
  
-require_once $path . 'lib/less/Less.php';
+require_once $path . 'libs/less/Less.php';
  
 
 if (!ini_get('date.timezone')) {
@@ -17,7 +17,8 @@ try {
 	$options = array(
 		'cache_dir' => $path . '.cache', 
 		'import_dirs' => array(
-			$path . 'media/fonts/' => $webroot . '/media/fonts/'
+			$path . 'media/fonts/' => $webroot . '/media/fonts/',
+			$path . 'less/libs/',
 		),
 
 		'compress'=>true,	
