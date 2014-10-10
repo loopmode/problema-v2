@@ -48,7 +48,8 @@ function templateFile($pageId) {
 } 
 function templateData($pageId) {
 	$data = array(
-		'id' => $pageId
+		'id' => $pageId,
+		'params' => json_encode($_GET)
 	);
 
 	$file = './pages/' . $pageId . '/data.json';

@@ -1,0 +1,62 @@
+.nav-dropdown {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+    text-align: center;
+
+    .navbar li a {
+        background-color: black;
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    .navbar-default .navbar-nav>.open>a {
+        &, &:hover, &:focus {
+            // nested links, must override bootstrap
+            background-color: black;
+            color: @hover-color;
+        }
+    }
+    .navbar-collapse {
+        > ul > li {
+            & + li {
+                // horizontal gap between the toplevel dropdown entries
+                margin-left: 1px;
+            }
+        }
+    }
+    ul.navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    li.dropdown {
+        min-width: @dropdown-width;
+    }
+    .dropdown-menu {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        min-width: @dropdown-width;
+        li > a {
+            padding: 8px;
+            &:hover {
+                color: @hover-color;
+            }
+        }
+    }
+}
+.navbar {
+    margin-bottom: 0;
+    background: none;
+    border: none;
+}
+.navbar-header {
+    display: none;
+}

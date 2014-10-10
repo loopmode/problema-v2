@@ -1,11 +1,10 @@
 define([
-    'amplify',
     'jquery',
     'backbone',
     'app/views/page',
     'app/views/poster',
     'app/views/spinner'
-], function(amplify, $, Backbone, Page, Poster, Spinner) {
+], function($, Backbone, Page, Poster, Spinner) {
 
     var AppView = Backbone.View.extend({
 
@@ -13,8 +12,7 @@ define([
 
         defaults: {
             minContentHeight: 600,
-            introDebounceTime: 5000,
-            scrollDuration: 500
+            scrollDuration: 1000
         },
 
         events: {
@@ -24,123 +22,104 @@ define([
 
         currentPage: undefined,
         currentRoute: undefined,
-        currentlyLoadingPage: undefined,
+
+        poster: undefined,
+        spinner: undefined,
+
+        $main: $('main'),
 
         initialize: function(options) {
             this.options = $.extend(true, {}, this.defaults, options);
+
             this.createChildren();
             this.sanitizeLinks('nav');
 
-            setTimeout(this.intro.bind(this), 0);
-        },
-
-        intro: function() {
-            var now = new Date().getTime(),
-                lastStarted = amplify.store('lastStarted'),
-                elapsedTime = now - (lastStarted || 0),
-                introDuration = 'short';
-
-            if (Backbone.history.fragment) {
-                this.scrollToContent(0);
-
-            } else {
-                if (elapsedTime > this.options.introDebounceTime) {
-                    introDuration = 'long';
-                }
-            }
-
-            this.$el.addClass('intro-' + introDuration + ' ready');
-            this.showPage('/' + Backbone.history.fragment);
-
-            amplify.store('lastStarted', now);
-            this.lastStarted = lastStarted;
+            this.$el.addClass('app-ready');
         },
 
         createChildren: function() {
-            this.$main = this.$('main');
             this.poster = new Poster();
             this.spinner = new Spinner();
         },
 
         handleLink: function(e) {
-            var href = $(e.currentTarget).attr('href');
-            if (href && href.indexOf('/') === 0) {
+            var route = $(e.currentTarget).attr('href');
+            if (route && route.indexOf('/') === 0) {
                 e.preventDefault();
-                Backbone.history.navigate(href);
-                this.showPage(href);
+                Backbone.history.navigate(route);
+                this.setRoute(route);
             }
         },
 
-        showPage: function(route) {
+        setRoute: function(route) {
 
             if (route === undefined || route === this.currentRoute) {
                 return;
             }
+            this.currentRoute = route;
 
-            var self = this,
-                minHeight = this.options.minContentHeight,
-                oldPage = this.currentPage,
-                newPage = new Page({
-                    route: route
-                });
+            var page = Page.create({
+                route: route
+            });
 
-            function showNewPage() {
-                if (self.currentlyLoadingPage) {
-                    self.currentlyLoadingPage.abort();
-                }
-
-                self.currentlyLoadingPage = newPage;
-                self.currentRoute = route;
-                self.currentPage = newPage;
-                self.spinner.show();
-              //  self.scrollToContent();
-
-                newPage
-                    .load()
+            if (this.currentPage) {
+                this.$main.css('min-height', Math.max(this.currentPage.$el.height(), this.options.minContentHeight));
+                this.currentPage.abort();
+                this.currentPage.hide()
                     .then(function() {
-                        self.currentlyLoadingPage = undefined;
-                        self.$main.css('min-height', Math.max(minHeight, newPage.$el.height()));
-                        self.spinner
-                            .hide()
-                            .then(function() {
-                                newPage.show();
-                            });
-                        self.sanitizeLinks(newPage.$el);
-                    });
-            }
-
-            if (oldPage === undefined) {
-                showNewPage();
+                        this.setCurrentPage(page);
+                    }.bind(this));
             } else {
-                this.$main.css('min-height', Math.max(minHeight, oldPage.$el.height()));
-                oldPage
-                    .hide()
-                    .then(function() {
-                        showNewPage();
-                    });
+                this.setCurrentPage(page);
             }
         },
 
-        scrollToContent: function() {
+        setCurrentPage: function(page) {
+            this.spinner.show();
+            this.currentPage = page;
+            this.currentPage.load()
+                .then(function() {
+                    this.sanitizeLinks(page.$el);
+                    this.trigger('page:loaded', page);
+                    this.spinner.hide()
+                        .then(function() {
+                            $('body').removeClass('empty');
+                            page.show().then(function() {
+                                this.$main.css('min-height', Math.max(page.$el.height(), this.options.minContentHeight));
+                                this.trigger('page:shown', page);
+                            }.bind(this));
+                        }.bind(this));
+                }.bind(this));
+        },
+
+        scrollToContent: function(duration) {
+        
+
 
             var body = $("html, body").stop().unbind(".e"),
-                dfd = $.Deferred(),
                 targetScroll = this.$('nav.nav-tabs').offset().top - 100;
 
-            // abort if user scrolls manually while animating!
+                 
             body.bind("scroll.e mousedown.e DOMMouseScroll.e body.e keyup.e", function() {
                 body.stop().unbind(".e");
             });
+            
+            if (this.isScrolling) {
+                return;
+            }
+            this.isScrolling = true;
 
             body.animate({
                 scrollTop: targetScroll
-            }, this.options.scrollDuration, function() {
+            }, isNaN(duration) ? this.options.scrollDuration : duration, function() {
+                this.isScrolling = false;
                 body.unbind(".e");
-            });
+            }.bind(this));
 
         },
 
-        /** TODO: should be obsolete in time... */
+
+        /** TODO: get rewriting done serverside and get rid off "sanitizing" insane shit! */
         sanitizeLinks: function(target) {
             $(target || 'body').find('a[href*="?page="]').each(function(i, a) {
                 var fragment = a.href.split('?page=')[1];

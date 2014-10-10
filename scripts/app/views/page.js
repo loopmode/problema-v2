@@ -13,21 +13,21 @@ define([
          * @property options.route {String}
          */
         defaults: {
-            animDuration: 650
+            animDuration: 400
         },
-        
+
         initialize: function(options) {
             this._super.apply(this, options);
             this.options = $.extend(true, {}, this.defaults, options);
         },
-        
+
         show: function() {
-            $('#content').empty().append( this.$el );
+            $('#content').empty().append(this.$el);
             return this.animate({
                 opacity: 1
             }, this.options.animDuration);
         },
-        
+
         hide: function() {
             return this.animate({
                 opacity: 0
@@ -79,11 +79,16 @@ define([
             }
             this.xhr = undefined;
         },
-        
+
         remove: function() {
             this.abort();
             this._super();
         }
     });
+
+    Page.create = function(options) {
+        return new Page(options);
+    };
+ 
     return Page;
 });

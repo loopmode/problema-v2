@@ -12,6 +12,7 @@ define(['jquery', 'underscore'], function($, _) {
 	function Watcher(target) {
 		this.target = $(target);
 		this.modes = ['xs', 'sm', 'md', 'lg'];
+		this.classPrefix = 'responsive-';
 		this.initialize();
 	}
 
@@ -39,9 +40,10 @@ define(['jquery', 'underscore'], function($, _) {
 
 		update: function() {
 
-			var target = this.target;
+			var target = this.target,
+				prefix = this.classPrefix;
 			this.elements.each(function() {
-				target[$(this).is(':visible') ? 'addClass' : 'removeClass']($(this).data('class'));
+				target[$(this).is(':visible') ? 'addClass' : 'removeClass'](prefix + $(this).data('class'));
 			});
 
 			var mode = this.elements.filter(':visible').data('class');
