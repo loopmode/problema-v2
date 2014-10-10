@@ -1,3 +1,33 @@
+.nav-tabs {
+    margin-bottom: 30px;
+    ul.nav {
+        > li {
+            position: static;
+            > ul {
+                position: absolute;
+                left: 0;
+                > li {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: black;
+    }
+    .navbar-default .navbar-nav>.open>a {
+        color:  @link-color; 
+        background-color: black;
+        &, &:hover, &:focus {
+            color: @hover-color;
+        }
+    }
+    .dropdown-menu li a {   
+        background-color: black;
+        color:  @link-color; 
+        &:hover, &:focus { color:  @hover-color; }
+    }
+}
 .nav-dropdown {
     position: absolute;
     top: 0;
@@ -5,7 +35,6 @@
     padding: 0;
     z-index: 1;
     text-align: center;
-
     .navbar li a {
         background-color: black;
         font-size: 10px;
@@ -15,7 +44,6 @@
         padding: 5px 10px;
         text-align: center;
     }
-
     .navbar-default .navbar-nav>.open>a {
         &, &:hover, &:focus {
             // nested links, must override bootstrap
