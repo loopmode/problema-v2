@@ -63,7 +63,7 @@ define([
             });
 
             if (this.currentPage) {
-                this.$main.css('min-height', Math.max(this.currentPage.$el.height(), this.options.minContentHeight));
+                this.$main.css('min-height', this.getMinPageHeight(this.currentPage.$el));
                 this.currentPage.abort();
                 this.currentPage.hide()
                     .then(function() {
@@ -85,19 +85,24 @@ define([
                         .then(function() {
                             $('body').removeClass('empty');
                             page.show().then(function() {
-                                this.$main.css('min-height', Math.max(page.$el.height(), this.options.minContentHeight));
+                                this.$main.css('min-height', this.getMinPageHeight(page.$el));
                                 this.trigger('page:shown', page);
                             }.bind(this));
                         }.bind(this));
                 }.bind(this));
         },
 
+        getContentScreenTop: function() {
+            return this.$('nav.nav-tabs').offset().top- 100;
+        },
+        getMinPageHeight: function(el) {
+            return Math.max(el.height(), $(window).height() - (this.getContentScreenTop() - $(window).scrollTop() ) ) - $('body > footer').outerHeight(true) - $('.nav-tabs').outerHeight(true) - 100;
+        },
         scrollToContent: function(duration) {
         
 
-
             var body = $("html, body").stop().unbind(".e"),
-                targetScroll = this.$('nav.nav-tabs').offset().top - 100;
+                targetScroll = this.getContentScreenTop();
 
                  
             body.bind("scroll.e mousedown.e DOMMouseScroll.e body.e keyup.e", function() {
