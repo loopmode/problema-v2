@@ -1,8 +1,6 @@
 <?php
 $path = dirname(__FILE__) . '/../../';
-$configFile = $path . 'config.json';
-$config = json_decode(file_get_contents($configFile)); 
-$webroot = $config->root;
+$webroot = $_SERVER['HTTP_HOST'];
  
 require_once $path . 'libs/less/Less.php';
  

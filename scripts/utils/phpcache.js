@@ -2,10 +2,10 @@ define(['jquery', 'utils/log'], function($, log) {
 
     var phpcache = {
         clear: function() {
+            log('clear php cache');
             var location = window.location;
-            var url = location.protocol + '//' + location.hostname + '/?clearcache';
             return $.ajax({
-                url: url,
+                url: 'clearcache.php',
                 dataType: 'json'
             }).then(function(response) {
                 log('cache flushed', response);

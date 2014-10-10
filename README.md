@@ -1,10 +1,3 @@
-# deployment
-
-copy via ftp.
-make sure to set the right hostname in project.config.json!!!
-
-
-
 # content pages
 
 ## conventions
