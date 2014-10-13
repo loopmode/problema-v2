@@ -22,6 +22,8 @@ if (isset($_GET['page'])) {
 //----------------------------------------------------------
 $file = templateFile($pageId);
 $data = templateData($pageId);
+$data['nav'] = json_decode(file_get_contents("sitemap.json"));
+//print_r(file_get_contents("sitemap.json"));die;
 $template = new H2o($file, array(
     'cache_dir' => dirname(__FILE__) . '/.cache',
     'autoescape' => false

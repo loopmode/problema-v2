@@ -1,4 +1,13 @@
-.nav-tabs {
+body > nav {
+    text-transform: uppercase;
+}
+nav a {
+    .transition(color 0.5s);
+}
+.nav-bottom {
+    .container {
+        position: relative;
+    }
     margin-bottom: 30px;
     ul.nav {
         > li {
@@ -16,19 +25,27 @@
         background-color: black;
     }
     .navbar-default .navbar-nav>.open>a {
-        color:  @link-color; 
+        color: @link-color;
         background-color: black;
         &, &:hover, &:focus {
-            color: @hover-color;
+            color: @link-hover-color;
+        }
+        &.active {
+            color: @link-active-color;
         }
     }
-    .dropdown-menu li a {   
+    .dropdown-menu li a {
         background-color: black;
-        color:  @link-color; 
-        &:hover, &:focus { color:  @hover-color; }
+        color: @link-color;
+        &:hover, &:focus {
+            color: @link-hover-color;
+        }
+        &.active {
+            color: @link-active-color;
+        }
     }
 }
-.nav-dropdown {
+.nav-top {
     position: absolute;
     top: 0;
     width: 100%;
@@ -48,7 +65,7 @@
         &, &:hover, &:focus {
             // nested links, must override bootstrap
             background-color: black;
-            color: @hover-color;
+            color: @link-hover-color;
         }
     }
     .navbar-collapse {
@@ -75,7 +92,7 @@
         li > a {
             padding: 8px;
             &:hover {
-                color: @hover-color;
+                color: @link-hover-color;
             }
         }
     }

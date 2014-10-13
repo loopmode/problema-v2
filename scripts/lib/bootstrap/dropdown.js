@@ -84,6 +84,7 @@
     $items.eq(index).trigger('focus')
   }
 
+  
   function clearMenus(e) {
     if (e && e.which === 3) return
     $(backdrop).remove()

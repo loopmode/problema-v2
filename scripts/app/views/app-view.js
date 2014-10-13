@@ -18,7 +18,7 @@ define([
 
         events: {
             'click a[href^="/"]': 'handleLink',
-            'click .nav-dropdown a[href^="/"]': 'scrollToContent'
+            'click .nav-top a[href^="/"]': 'scrollToContent'
         },
 
         currentPage: undefined,
@@ -34,6 +34,10 @@ define([
 
             this.createChildren();
             this.sanitizeLinks('nav');
+
+            $('.nav-bottom').on('hide.bs.dropdown', function(e) {
+                e.preventDefault();
+            })
 
             this.$el.addClass('app-ready');
         },
@@ -58,10 +62,12 @@ define([
                 return;
             }
             this.currentRoute = route;
+            this.hilightNavLink(this.currentRoute);
 
             var page = Page.create({
                 route: route
             });
+
 
             if (this.currentPage) {
                 this.$main.css('min-height', this.getMinPageHeight(this.currentPage.$el));
@@ -94,10 +100,15 @@ define([
         },
 
         getContentScreenTop: function() {
-            return this.$('nav.nav-tabs').offset().top- 100;
+            return this.$('nav.nav-bottom').offset().top- 100;
         },
         getMinPageHeight: function(el) {
-            return Math.max(el.height(), $(window).height() - (this.getContentScreenTop() - $(window).scrollTop() ) ) - $('body > footer').outerHeight(true) - $('.nav-tabs').outerHeight(true) - 100;
+            return Math.max(el.height(), $(window).height() - (this.getContentScreenTop() - $(window).scrollTop() ) ) - $('body > footer').outerHeight(true) - $('.nav-bottom').outerHeight(true) - 100;
+        },
+        hilightNavLink: function(route) {
+            this.$('> nav a').removeClass('active').filter('[href$="'+route+'"]').addClass('active');
+            this.$('> .nav-bottom .dropdown').removeClass('open');
+            this.$('> .nav-bottom a.active').closest('.dropdown').addClass('open');
         },
         scrollToContent: function(duration) {
         

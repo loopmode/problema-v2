@@ -11,8 +11,8 @@ define([
 
         $(function() {
 
-            var appView = new AppView();
             var router = new AppRouter();
+            var appView = new AppView();
 
             if (Backbone.history.fragment) {
                 appView.setRoute('/' + Backbone.history.fragment);
@@ -31,7 +31,6 @@ define([
                 }
             });
             router.on('route', appView.setRoute, appView);
-            
             window.setTimeout(intro.run, 0);
  
             require(['utils/phpcache']);
