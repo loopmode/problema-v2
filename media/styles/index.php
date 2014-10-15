@@ -2,7 +2,7 @@
 $path = dirname(__FILE__) . '/../../';
 $webroot = $_SERVER['HTTP_HOST'];
  
-require_once $path . 'libs/less/Less.php';
+require_once $path . 'includes/libs/less/Less.php';
  
 
 if (!ini_get('date.timezone')) {

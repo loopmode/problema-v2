@@ -27,11 +27,11 @@
     <div class="loading-indicator">
         {% include "templates/partials/spinner.html" %}
     </div>
- <hr>
+ 
     <nav class="nav-top">
-        {% include "templates/partials/nav-top.html" %}
+        {% include "templates/partials/nav.html" with position="top" %}
     </nav>
-<hr>
+ 
     <header>
         <div class="poster container">
             <div class="layer poster-background">
@@ -46,7 +46,7 @@
     </header>
 
     <nav class="nav-bottom">
-        {% include "templates/partials/nav-bottom.html" %}
+        {% include "templates/partials/nav.html" with position="bottom" %}
     </nav>
 
     <main>

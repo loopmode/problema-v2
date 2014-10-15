@@ -139,9 +139,9 @@ define([
         /** TODO: get rewriting done serverside and get rid off "sanitizing" insane shit! */
         sanitizeLinks: function(target) {
             $(target || 'body').find('a[href*="?page="]').each(function(i, a) {
-                var fragment = a.href.split('?page=')[1];
-                if (fragment !== undefined) {
-                    a.href = '/' + fragment;
+                var route = a.href.split('?page=')[1];
+                if (route !== undefined) {
+                    a.href = route;
                 }
             });
         }

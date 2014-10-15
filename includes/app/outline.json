@@ -1,0 +1,51 @@
+[{
+    "name": "experience",
+    "items": [{
+        "route": "/film",
+        "text": "the film"
+    }, {
+        "route": "/trailer",
+        "text": "the trailer"
+    }, {
+        "route": "/downloads",
+        "text": "downloads"
+    }]
+}, 
+{
+    "name": "information",
+    "items": [{
+        "route": "/introduction",
+        "text": "introduction"
+    }, {
+        "route": "/questions",
+        "text": "questions"
+    }, {
+        "route": "/cast",
+        "text": "cast"
+    }, {
+        "route": "/visuality",
+        "text": "visuality"
+    }, {
+        "route": "/credits",
+        "text": "credits"
+    }, {
+        "route": "/background",
+        "text": "background"
+    }]
+}, 
+{
+    "name": "participation",
+    "items": [{
+        "route": "/press",
+        "text": "press"
+    }, {
+        "route": "/guestbook",
+        "text": "guestbook"
+    }, {
+        "route": "/shop",
+        "text": "shop"
+    }, {
+        "route": "/donate",
+        "text": "donate"
+    }]
+}]

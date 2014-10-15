@@ -1,0 +1,23 @@
+<div class="navbar navbar-default navbar-{{position}}" role="navigation">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {% for index, section in page.navigation %}
+                <li class="dropdown">
+                    
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" {% if position == "bottom" %}data-close-others="true"{% endif %}>
+                        {{section.name}}
+                    </a>
+
+                    <ul class="dropdown-menu" role="menu">
+                    {% for index, item in section.items %}
+                        <li><a href="/?page={{item.route}}">{{item.text}}</a></li>
+                    {% endfor %}
+                        <li><a href="clearcache.php">clear cache</a></li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
