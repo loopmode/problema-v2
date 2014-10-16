@@ -1,6 +1,6 @@
 define([
-    'jquery', 
-    'underscore', 
+    'jquery',
+    'underscore',
     'backbone'
 ], function($, _, Backbone) {
 
@@ -14,7 +14,7 @@ define([
         _knownRoutes: [],
 
         initialize: function(navRoutes) {
-                        
+
             _.each(this.getAllRoutes(), this.addRoute.bind(this));
 
             Backbone.history.start({
@@ -23,18 +23,20 @@ define([
         },
 
         getAllRoutes: function() {
-            var navRoutes = {};
-            $('a[href*="?page"]').each(function() {
-                var route = this.href.split('?page=')[1];
-                if (!navRoutes.hasOwnProperty(route)) {
-                    navRoutes[route] = route;
+            var routes = {};
+            $('a[href^="/"]').each(function() {
+                var route = this.pathname.slice(1);
+                if (!routes.hasOwnProperty(route)) {
+                    routes[route] = route;
                 }
             });
-            return $.extend({}, this.defaultRoutes, navRoutes);
+            return $.extend({}, this.defaultRoutes, routes);
         },
 
         addRoute: function(route, name) {
-            if (_.contains(this._knownRoutes, route)) { return false; }
+            if (_.contains(this._knownRoutes, route)) {
+                return false;
+            }
             this._knownRoutes.push(route);
             console.log('route created', route);
             this.route(route, name || route);

@@ -1,1 +1,10 @@
-ErrorDocument 404 /index.php
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !index
+RewriteRule ^([^/]+)$ index.php?route=$1 [L]
+ 
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^([^/]+)/([^/]+)$ index.php?route=$1&sp=$2 [L]

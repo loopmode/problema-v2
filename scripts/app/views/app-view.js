@@ -33,11 +33,10 @@ define([
             this.options = $.extend(true, {}, this.defaults, options);
 
             this.createChildren();
-            this.sanitizeLinks('nav');
 
             $('.nav-bottom').on('hide.bs.dropdown', function(e) {
                 e.preventDefault();
-            })
+            });
 
             this.$el.addClass('app-ready');
         },
@@ -52,11 +51,11 @@ define([
             if (route && route.indexOf('/') === 0) {
                 e.preventDefault();
                 Backbone.history.navigate(route);
-                this.setRoute(route);
+                this.handleRoute(route);
             }
         },
 
-        setRoute: function(route) {
+        handleRoute: function(route) {
 
             if (route === undefined || route === this.currentRoute) {
                 return;
@@ -82,45 +81,51 @@ define([
         },
 
         setCurrentPage: function(page) {
+            var self = this;
             this.spinner.show();
             this.currentPage = page;
-            this.currentPage.load()
-                .then(function() {
-                    this.sanitizeLinks(page.$el);
-                    this.trigger('page:loaded', page);
-                    this.spinner.hide()
-                        .then(function() {
-                            $('body').removeClass('empty');
-                            page.show().then(function() {
-                                this.$main.css('min-height', this.getMinPageHeight(page.$el));
-                                this.trigger('page:shown', page);
-                            }.bind(this));
-                        }.bind(this));
-                }.bind(this));
+            this.currentPage.load().then(function() {
+
+                self.trigger('page:loaded', page);
+
+                self.spinner.hide()
+                    .then(function() {
+                        $('body').removeClass('empty');
+                        page.show().then(function() {
+                            self.$main.css('min-height', self.getMinPageHeight(page.$el));
+
+                            self.trigger('page:shown', page);
+
+                        });
+                    });
+            });
         },
 
         getContentScreenTop: function() {
-            return this.$('nav.nav-bottom').offset().top- 100;
+            return this.$('nav.nav-bottom').offset().top - 100;
         },
+
         getMinPageHeight: function(el) {
-            return Math.max(el.height(), $(window).height() - (this.getContentScreenTop() - $(window).scrollTop() ) ) - $('body > footer').outerHeight(true) - $('.nav-bottom').outerHeight(true) - 100;
+            return Math.max(el.height(), $(window).height() - (this.getContentScreenTop() - $(window).scrollTop())) - $('body > footer').outerHeight(true) - $('.nav-bottom').outerHeight(true) - 100;
         },
+
         hilightNavLink: function(route) {
-            this.$('> nav a').removeClass('active').filter('[href$="'+route+'"]').addClass('active');
+            this.$('> nav a').removeClass('active').filter('[href$="' + route + '"]').addClass('active');
             this.$('> .nav-bottom .dropdown').removeClass('open');
             this.$('> .nav-bottom a.active').closest('.dropdown').addClass('open');
         },
+
         scrollToContent: function(duration) {
-        
+
 
             var body = $("html, body").stop().unbind(".e"),
                 targetScroll = this.getContentScreenTop();
 
-                 
+
             body.bind("scroll mousedown DOMMouseScroll keyup", function() {
                 body.stop().unbind("scroll mousedown DOMMouseScroll keyup");
             });
-            
+
             if (this.isScrolling) {
                 return;
             }
@@ -133,18 +138,8 @@ define([
                 body.unbind(".e");
             }.bind(this));
 
-        },
-
-
-        /** TODO: get rewriting done serverside and get rid off "sanitizing" insane shit! */
-        sanitizeLinks: function(target) {
-            $(target || 'body').find('a[href*="?page="]').each(function(i, a) {
-                var route = a.href.split('?page=')[1];
-                if (route !== undefined) {
-                    a.href = route;
-                }
-            });
         }
+
     });
 
     return AppView;

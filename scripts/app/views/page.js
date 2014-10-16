@@ -58,7 +58,7 @@ define([
                 dfd.resolve(cache[route]);
             } else {
                 this.xhr = $.ajax({
-                        url: 'index.php?page=' + this.options.route,
+                        url: this.options.route,
                         type: 'get',
                         dataType: 'html'
                     })

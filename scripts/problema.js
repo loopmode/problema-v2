@@ -15,7 +15,7 @@ define([
             var appView = new AppView();
 
             if (Backbone.history.fragment) {
-                appView.setRoute('/' + Backbone.history.fragment);
+                appView.handleRoute('/' + Backbone.history.fragment);
             }
             else {
                 var defaultContent = '/introduction';
@@ -34,7 +34,10 @@ define([
             window.setTimeout(intro.run, 0);
  
             require(['utils/phpcache']);
-            window.app = appView;
+            window.app = {
+                router: router,
+                view: appView
+            };
 
         });
     });

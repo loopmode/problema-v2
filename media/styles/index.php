@@ -1,6 +1,6 @@
 <?php
 $path = dirname(__FILE__) . '/../../';
-$webroot = $_SERVER['HTTP_HOST'];
+$webroot = 'http://' . $_SERVER['HTTP_HOST'];
  
 require_once $path . 'includes/libs/less/Less.php';
  

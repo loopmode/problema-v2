@@ -1,5 +1,7 @@
 <?php
+require('./includes/app/App.php');
 
-require('./includes/app/ProblemaSite.php');
-$site = new ProblemaSite(getcwd());
-echo $site->render($_GET['page']);
+$site = new App();
+$site->init(getcwd());
+//die('/' . $_GET['page']);
+echo $site->render('/' . $_GET['route']);
